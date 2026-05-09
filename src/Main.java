@@ -8,7 +8,15 @@ public class Main {
 
         Club realMadrid =
                 new Club("Real Madrid", 1000000);
+        Player p1 = new Player("Vinicius", 24, 7, "Forward", 80000);
+        Player p2 = new Player("Bellingham", 21, 5, "Midfielder", 90000);
 
+        try {
+            realMadrid.addPlayer(p1);
+            realMadrid.addPlayer(p2);
+        } catch (TransferException e) {
+            System.out.println(e.getMessage());
+        }
         while (true) {
 
             System.out.println("\n==============================");
